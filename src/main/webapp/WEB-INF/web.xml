@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="S2S-INCIDENT" version="3.1"
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    
+    <servlet>
+        <servlet-name>spring-aop-demo</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>throwExceptionIfNoHandlerFound</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+        <async-supported>true</async-supported>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>spring-aop-demo</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+    
+</web-app>

@@ -1,0 +1,156 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+
+	<groupId>org.test</groupId>
+	<artifactId>spring-aop-demo</artifactId>
+	<name>Spring AOP Demo</name>
+	<description>Demo application showing Spring's AOP functionality</description>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+
+	<properties>
+		<spring.version>4.3.1.RELEASE</spring.version>
+		<hibernate.version>5.1.0.Final</hibernate.version>
+		<hibernate-jpa.version>1.0.0.Final</hibernate-jpa.version>
+		<liquibase.version>3.3.2</liquibase.version>
+		<h2.version>1.4.192</h2.version>
+	</properties>
+	
+	<dependencies>
+		<dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+            <scope>provided</scope>
+        </dependency>
+        
+		<!-- Hibernate -->
+		<dependency>
+  			<groupId>org.hibernate</groupId>
+  			<artifactId>hibernate-core</artifactId>
+  			<version>${hibernate.version}</version>
+		</dependency>
+		<dependency>
+  			<groupId>org.hibernate</groupId>
+  			<artifactId>hibernate-entitymanager</artifactId>
+  			<version>${hibernate.version}</version>
+		</dependency>
+		<dependency>
+  			<groupId>org.hibernate.javax.persistence</groupId>
+  			<artifactId>hibernate-jpa-2.1-api</artifactId>
+  			<version>${hibernate-jpa.version}</version>
+		</dependency>
+		
+		<!-- Spring -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+			<version>${spring.version}</version>
+        </dependency>
+        <dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<!-- Commons -->
+        <dependency>
+            <groupId>commons-configuration</groupId>
+            <artifactId>commons-configuration</artifactId>
+            <version>1.10</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.4</version>
+        </dependency>
+        <dependency>
+		    <groupId>org.apache.commons</groupId>
+		    <artifactId>commons-dbcp2</artifactId>
+		    <version>2.1.1</version>
+		</dependency>
+        
+        <!-- Jackson -->
+        <dependency>
+	        <groupId>com.fasterxml.jackson.core</groupId>
+	        <artifactId>jackson-core</artifactId>
+	        <version>2.6.7</version>
+	    </dependency>
+	    <dependency>
+	        <groupId>com.fasterxml.jackson.core</groupId>
+	        <artifactId>jackson-databind</artifactId>
+	        <version>2.6.7</version>
+	    </dependency>
+	    <dependency>
+	        <groupId>com.fasterxml.jackson.core</groupId>
+	        <artifactId>jackson-annotations</artifactId>
+	        <version>2.6.7</version>
+	    </dependency>
+        
+        <!--  AOP -->
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>1.8.5</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjrt</artifactId>
+			<version>1.8.5</version>
+		</dependency>
+		
+		<!-- Log4J -->
+		<dependency>
+		    <groupId>log4j</groupId>
+		    <artifactId>log4j</artifactId>
+		    <version>1.2.17</version>
+		</dependency>
+		
+		<!-- Database -->
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>${h2.version}</version>
+		</dependency>
+		
+		<!-- Test scope dependencies -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-all</artifactId>
+			<version>1.10.8</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>4.3.1.RELEASE</version>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+	
+	<build>
+		<plugins>
+	      <plugin>
+	        <groupId>org.apache.maven.plugins</groupId>
+	        <artifactId>maven-compiler-plugin</artifactId>
+	        <version>3.5.1</version>
+	        <configuration>
+	          <source>1.8</source>
+	          <target>1.8</target>
+	        </configuration>
+	      </plugin>
+	    </plugins>
+	</build>
+	
+
+</project>
